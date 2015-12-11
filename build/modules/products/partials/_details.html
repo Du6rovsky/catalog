@@ -1,0 +1,11 @@
+
+<div ng-init="getId()" class="details">
+  <div ng-repeat="p in products" ng-if="p.id == detId" class="more"><img ng-src="{{p.img}}"/>
+    <div class="line">Product id : <span ng-bind="p.id"></span></div>
+    <div class="line">Model name : <span ng-bind="p.name"></span></div>
+    <div class="line">Color : <span ng-bind="p.color"></span></div>
+    <div class="line">Issue date : <span ng-bind="p.issueDate | date"></span></div>
+    <div class="line">Cost : <span ng-bind="p.price| currency"></span></div>
+    <div class="line">More info <a target="_blank" href="{{p.wiki}}">here</a></div>
+  </div>
+</div>

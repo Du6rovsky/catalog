@@ -1,0 +1,17 @@
+
+<div class="products">
+  <table>
+    <tr>
+      <th class="id"><span ng-click="sort('id')">Id</span><span ng-show="predicate === 'id'" ng-class="{reverse:reverse}" class="sortorder"></span></th>
+      <th class="photo"><span>Photo</span></th>
+      <th class="name"><span ng-click="sort('name')">Name</span><span ng-show="predicate === 'name'" ng-class="{reverse:reverse}" class="sortorder"></span></th>
+      <th class="cost"><span ng-click="sort('price')">Cost</span><span ng-show="predicate === 'price'" ng-class="{reverse:reverse}" class="sortorder"></span></th>
+    </tr>
+    <tr ng-repeat="product in products">
+      <td class="id"><span ng-bind="product.id"></span></td>
+      <td class="photo"><img ng-src="{{product.img}}"/></td>
+      <td class="name"><a ui-sref="details({ id: product.id})" ng-bind="product.name" ng-click="getId(product.id)"></a></td>
+      <td class="cost"><span ng-bind="product.price | currency"></span></td>
+    </tr>
+  </table>
+</div>

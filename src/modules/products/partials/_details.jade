@@ -1,0 +1,15 @@
+.details(ng-init="getId()")
+	.more(ng-repeat="p in products" ng-if="p.id == detId")
+		img(ng-src="{{p.img}}")
+		.line Product id : 
+			span(ng-bind="p.id")
+		.line Model name : 
+			span(ng-bind="p.name")
+		.line Color : 
+			span(ng-bind="p.color")
+		.line Issue date : 
+			span(ng-bind="p.issueDate | date")
+		.line Cost : 
+			span(ng-bind="p.price| currency")
+		.line More info 
+			a(target="_blank" href="{{p.wiki}}") here

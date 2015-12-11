@@ -1,0 +1,6 @@
+.header
+	- var items = [{ "name" : "Products", "link":"/products"},{"name" : "Reviews", "link" : "/reviews"}]
+	ul.menu
+		each item in items
+			li
+				a(href=item.link)=item.name

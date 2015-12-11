@@ -1,0 +1,12 @@
+doctype html
+html(ng-app="catalogApp")
+	head
+		title Catalog web application
+		meta(charset="utf-8" lang="ru")
+		link(href="/build/css/app.css", rel="stylesheet" type="text/css")
+		link(rel="shortcut icon" href="/build/img/favicon.png" type="image/x-icon")
+		link(rel="icon" href="/build/img/favicon.png" type="image/x-icon")
+	body
+		include ./modules/main/header/_header		
+		.view(ui-view)
+		script(src="/build/js/bundle.js")

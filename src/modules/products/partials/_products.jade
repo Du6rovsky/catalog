@@ -1,0 +1,23 @@
+.products
+	table
+		tr
+			th.id
+				span(ng-click="sort('id')") Id
+				span.sortorder(ng-show="predicate === 'id'" ng-class="{reverse:reverse}")
+			th.photo
+				span Photo
+			th.name
+				span(ng-click="sort('name')") Name
+				span.sortorder(ng-show="predicate === 'name'" ng-class="{reverse:reverse}")
+			th.cost
+				span(ng-click="sort('price')") Cost
+				span.sortorder(ng-show="predicate === 'price'" ng-class="{reverse:reverse}")
+		tr(ng-repeat="product in products")
+			td.id
+				span(ng-bind="product.id")
+			td.photo
+				img(ng-src="{{product.img}}")
+			td.name
+				a(ui-sref="details({ id: product.id})" ng-bind="product.name" ng-click="getId(product.id)")
+			td.cost
+				span(ng-bind="product.price | currency")

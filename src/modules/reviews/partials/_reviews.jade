@@ -1,0 +1,18 @@
+.reviews
+	ul.list(ng-if="reviews.length>0")
+		h1 Last reviews
+		li(ng-repeat="r in reviews | reverse")
+			.item Date : 
+				span(ng-bind="r.date")
+			.item Author : 
+				span(ng-bind="r.author")
+			.item Review : 
+				span(ng-bind="r.review")
+
+	form(ng-submit="create(author,review)")
+		h1 Give us your feedback
+		label Name :
+		input(type="text" maxlength="25" ng-model="author" required)
+		label Review :
+		textarea(type="text" maxlength="200" ng-model="review" required)
+		button.btn(type="submit") Send

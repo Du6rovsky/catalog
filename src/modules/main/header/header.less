@@ -1,0 +1,28 @@
+.header {
+	width: 100%;
+	min-width: 1024px;
+	height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	.menu {
+		width : 200px;
+		height: 100%;
+		margin: 0 auto;
+		li {
+			list-style: none;
+			&:first-child {
+				float: left;
+			}
+			&:last-child {
+				float: right;
+			}
+			a {
+				text-decoration: none;
+				color: rgb(60, 60, 61);
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

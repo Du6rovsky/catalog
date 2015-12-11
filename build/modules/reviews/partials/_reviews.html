@@ -1,0 +1,19 @@
+
+<div class="reviews">
+  <ul ng-if="reviews.length&gt;0" class="list">
+    <h1>Last reviews</h1>
+    <li ng-repeat="r in reviews | reverse">
+      <div class="item">Date : <span ng-bind="r.date"></span></div>
+      <div class="item">Author : <span ng-bind="r.author"></span></div>
+      <div class="item">Review : <span ng-bind="r.review"></span></div>
+    </li>
+  </ul>
+  <form ng-submit="create(author,review)">
+    <h1>Give us your feedback</h1>
+    <label>Name :</label>
+    <input type="text" maxlength="25" ng-model="author" required="required"/>
+    <label>Review :</label>
+    <textarea type="text" maxlength="200" ng-model="review" required="required"></textarea>
+    <button type="submit" class="btn">Send</button>
+  </form>
+</div>
